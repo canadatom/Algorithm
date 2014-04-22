@@ -13,11 +13,11 @@ public class BinarySearch {
     public static void main(String[] args) {
 
         int number = 5;
-        int min = 0;
-        int max = 200;
+        int min = 1;
+        int max = 20;
 
         Random gen = new Random();
-        int[] numbers = new int[max + 1];
+        int[] numbers = new int[max];
         for (int i = min; i < max; i++) {
             numbers[i] = gen.nextInt(max);
         }
