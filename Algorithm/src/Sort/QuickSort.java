@@ -12,6 +12,7 @@ public class QuickSort {
 
     public void quickSort(int left, int right) {
 
+        // base case when right >=left
         if (left < right) {
             int iPivot = partition(left, right);
             quickSort(left, iPivot - 1);
@@ -24,7 +25,7 @@ public class QuickSort {
         // take pivot from right
         int pivot = collection[right];
 
-        // start index from right
+        // start index from left
         int pIndex = left;
 
         for (int i = left; i < right; i++) {

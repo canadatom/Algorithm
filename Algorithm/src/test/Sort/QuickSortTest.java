@@ -40,24 +40,4 @@ public class QuickSortTest {
         System.out.println(Arrays.toString(actual));
         assertArrayEquals(expected, actual);
     }
-
-
-    /**
-     * Method: partition(int[] collection, int left, int right)
-     */
-    @Test
-    public void testPartition() throws Exception {
-//TODO: Test goes here... 
-/* 
-try { 
-   Method method = QuickSort.getClass().getMethod("partition", int[].class, int.class, int.class); 
-   method.setAccessible(true); 
-   method.invoke(<Object>, <Parameters>); 
-} catch(NoSuchMethodException e) { 
-} catch(IllegalAccessException e) { 
-} catch(InvocationTargetException e) { 
-} 
-*/
-    }
-
 } 
