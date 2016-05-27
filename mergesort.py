@@ -1,33 +1,5 @@
 #!/usr/bin/python
 
-def merge(leftArray, rightArray):
-
-	i = 0 # left
-	j = 0 # right 
-	k = 0 # new array
-	array = []
-
-	while i < len(leftArray) and j < len(rightArray):
-		if leftArray[i] < rightArray[j]:
-			array[k] = leftArray[i]
-			i += 1
-		else:
-			array[k] = rightArray[j]
-			j += 1
-		k += 1
-
-	while i < len(leftArray):
-		array[k] = leftArray[i]
-		i += 1
-		k += 1
-
-	while j < len(rightArray):
-		array[k] = rightArray[j]
-		j += 1
-		k += 1
-	print("Merging ",array)
-	return array
-
 def mergeSort(array):
 	print ("Splitting", array)
 	# divide 
@@ -64,6 +36,36 @@ def mergeSort(array):
 		j += 1
 		k += 1
 	print("Merging ",array)
+	
+def merge(leftArray, rightArray):
+
+	i = 0 # left
+	j = 0 # right 
+	k = 0 # new array
+	array = []
+
+	# [3,5,8,9] and [1,2,4,7]
+	
+	while i < len(leftArray) and j < len(rightArray):
+		if leftArray[i] < rightArray[j]:
+			array[k] = leftArray[i]
+			i += 1
+		else:
+			array[k] = rightArray[j]
+			j += 1
+		k += 1
+
+	while i < len(leftArray):
+		array[k] = leftArray[i]
+		i += 1
+		k += 1
+
+	while j < len(rightArray):
+		array[k] = rightArray[j]
+		j += 1
+		k += 1
+	print("Merging ",array)
+	return array
 
 alist = [54,26,93,17,77,31,44,55,20]
 mergeSort(alist)

@@ -3,7 +3,6 @@
 def quicksort(array, start, finish):
 	if (start < finish):
 		pivot_index = partition(array, start, finish)
-		print "pivot_index: " + str(pivot_index)
 		quicksort(array, start, pivot_index - 1)
 		quicksort(array, pivot_index + 1, finish)
 
@@ -12,8 +11,6 @@ def quicksort(array, start, finish):
 def partition(array, start, finish):
 	pivot = array[finish]
 	p_index = start
-
-	print str(p_index) + " " + str(pivot) 
 
 	for i in range(start, finish):
 		if array[i] <= pivot:
